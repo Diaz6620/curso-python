@@ -140,13 +140,52 @@ print(mensaje)
 # Pide al usuario que introduzca dos números y muestra un mensaje
 # indicando cuál es mayor o si son iguales
 
+# number_one = int(input("introduce primer número"))
+# number_two = int(input("Introduce el segundo número"))
+
+# if number_one > number_two:
+#   print(f"{number_one} es mayor.")
+# elif number_one < number_two:
+#   print(f"{number_two} es mayor.")
+# else:
+#   print(f"{number_one} y {number_two} son iguales.")
+
+
+
 # Ejercicio 2: Calculadora simple
 # Pide al usuario dos números y una operación (+, -, *, /)
 # Realiza la operación y muestra el resultado (maneja la división entre zero)
 
+# number_one = int(input("Introduce primer número"))
+# number_two = int(input("Introduce segundo número"))
+# operation = input("Introduce la operación")
+
+# if operation == "+":
+#   print("Resultado:", number_one + number_two)
+# elif operation == "-":
+#   print("Resultado:", number_one - number_two)
+# elif operation == "*":
+#   print("Resultado:", number_one * number_two)
+# elif operation == "/" and number_two == 0:
+#   print(f"Resultado: {number_one}")
+# elif operation == "/":
+#   print("Resultado:", number_one / number_two)
+# else:
+#   print(f"{operation} no es una operación válida.")
+
 # Ejercicio 3: Año bisiesto
 # Pide al usuario que introduzca un año y determina si es bisiesto.
 # Un año es bisiesto si es divisible por 4, excepto si es divisible por 100 pero no por 400.
+
+# age = int(input("Inserta un año: "))
+# check_one = age / 4
+# check_two = age / 100
+# check_three = age / 400
+
+# if int(check_one) == check_one and int(check_two) != check_two or int(check_three) == check_three:
+#   print(f"El año {age} es bisiesto.")
+# else:
+#   print(f"El año {age} no es bisiesto.")
 
 # Ejercicio 4: Categorizar edades
 # Pide al usuario que introduzca una edad y la clasifique en:
@@ -155,3 +194,19 @@ print(mensaje)
 # - Adolescente (13-17 años)
 # - Adulto (18-64 años)
 # - Adulto mayor (65 años o más)
+
+age = int(input("Inserta una edad: "))
+
+if age >= 0:
+  if age < 3:
+    print("Bebé")
+  elif age < 13:
+    print("Niño")
+  elif age < 18:
+    print("Adolescente")
+  elif age < 65:
+    print("Adulto")
+  else:
+    print("Adulto mayor")
+else:
+  print("Inserta una edad a partir de 0")
