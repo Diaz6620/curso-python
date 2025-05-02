@@ -147,18 +147,34 @@ print("\nEjercicio 4:")
 # Imprime la tabla de multiplicar de ese número (del 1 al 10) usando un bucle while.
 print("\nEjercicio 5:")
 
-numero = int(input("Introduce un número del 1 al 10: "))
-contador = 0
-resultado = 0
+# numero = int(input("Introduce un número del 1 al 10: "))
+# contador = 0
+# resultado = 0
 
-print(f"Tabla del {numero}:")
-while contador <= 10:
-    resultado = contador * numero
-    print(f"{numero} X {contador} = {resultado}")
-    contador +=1
+# print(f"Tabla del {numero}:")
+# while contador <= 10:
+#     resultado = contador * numero
+#     print(f"{numero} X {contador} = {resultado}")
+#     contador +=1
 
 
 # Ejercicio 6: Números primos hasta N
 # Pide al usuario que introduzca un número entero positivo N.
 # Imprime todos los números primos menores o iguales que N usando un bucle while.
 print("\nEjercicio 6:")
+
+n = int(input("Introduce un número entero positivo N: "))
+
+number = 2
+while number <= n:
+  check = True
+  divisor = 2
+  while divisor * divisor <= number:
+    if number % divisor == 0:
+      check = False
+      break
+    divisor += 1
+  if check:
+    print(number)
+
+  number += 1

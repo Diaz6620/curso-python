@@ -92,3 +92,53 @@ mostrar_informacion_de(super_name="felixicaza", es_modo=True, gatos=40)
 # y convertirlos en funciones
 # e intentar utilizar todos los casos y conceptos
 # que hemos visto hasta ahora
+
+# def tabla_multiplicar(a):
+#   """Devuelve la tabla de multiplicar del número indicado"""
+#   print(f"La tabla del {a} es:")
+#   for i in range(1, 11):
+#     print(f"{a} X {i} = {a * i}")
+
+# def conducir():
+#   carnet = input("¿Tienes carnet de conducir?\n").lower()
+#   edad = int(input("¿Que edad tienes?\n"))
+#   if carnet == "si" and edad > 17:
+#     print("!Enhorabuena¡ Puedes conducir")
+#   else:
+#     print("Lo siento, de momento no puedes conducir.")
+
+# conducir()
+
+##########################################################################################
+
+#Funcion completa para recoger datos, saludar, evaluar conducir.
+
+def saludo_carnet():
+  name = input("Hola, ¿Cual es tu nombre?")
+  age = int(input(f"¡Hola {name}!, ¿Dime que edad tienes?"))
+  carnet = input(f"¡Perfecto {name}! y ya con {age} años, ¿Tienes carnet de conducir?").lower()
+
+  can_drive = False
+  if age > 17 and carnet == "si":
+    can_drive = True
+
+  if not can_drive:
+    print(f"Pues lo siento {name}, ")
+
+  
+
+  
+
+############### Refactorizar funcion para chequear por separado los datos ################
+
+def check(age, carnet):
+  check_age = False
+  check_carnet = False
+
+  if age > 17:
+    check_age = True
+
+  if carnet == "si":
+    check_carnet = True
+
+  return check_carnet, check_age
